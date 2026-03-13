@@ -1,0 +1,111 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Ruslan Display', sans-serif; }
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 1440px;
+  height: 1484px;
+  background-color: #f0f0f0;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  position: relative;
+}
+
+.title {
+  font-family: 'Jersey 10', sans-serif;
+  font-weight: 275;
+  font-size: 120px;
+  color: #000000;
+  text-shadow: -15px 10px blue;
+  margin-bottom: 50px;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url('../images/photo_1.png');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+  box-shadow: -20px 0px 30px rgba(0,0,0,0.3);
+}
+
+.icons {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.icon {
+  width: 546px;
+  height: 546px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+}
+
+.icon.telegram { background-image: url('../images/telegram.png'); }
+.icon.discord { background-image: url('../images/discord.png'); }
+.icon.tiktok { background-image: url('../images/tiktok.png'); }
+
+.icon-text {
+  font-size: 75px;
+  color: #acaaaa;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Адаптив для телефона */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 375px;
+    height: 853px;
+    border-radius: 100px;
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: 50px;
+    text-shadow: -7px 5px blue;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 156px;
+    height: 156px;
+  }
+
+  .icons {
+    gap: 20px;
+  }
+
+  .icon {
+    width: 201px;
+    height: 201px;
+  }
+
+  .icon-text {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
